@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Habbok - Desenvolvimento</title>
+    <link rel="stylesheet" href="/assents/css/habbok.css">
+    <script id='sonic_js' data-port='8036' src='https://stream.truesecurity.com.br/cp/widgets.js?r=638'></script>
+</head>
+<header>
+    <div class="container">
+        <img id="logo" src="/assents/img/logo-habbok.png" alt="Logo">
+        <div id="rectangle">
+            <button id="play-pause" onclick="window.location.href='index.html';">
+                <img id="play" src="/assents/img/play.png" alt="Imagem">
+            </button>
+            <p id="locutor">Locutor: <span id='sonic_dj'></span></p> <!-- Adicione esta linha -->
+            <p id="ouvintes">Ouvintes: <span id='sonic_listeners'></span></p> <!-- Adicione esta linha -->
+        </div>
+        <footer><img id="logo-hotel" src="/assents/img/habbok-hotel-loho.png" alt="Logo-Hotel">Somos um fã-site dedicado, sem vínculos diretos com a Rede Habbok Corporation Ltd.<br> Respeitamos a Política de Fã-sites Habbok para o uso de marcas registradas e propriedades intelectuais.<br> CMS Desenha e Programada por: Richard Zamoner</footer>
+    </div>
+</header>
+<script>
+document.getElementById('play-pause').addEventListener('click', function() {
+    var imagemBotao = document.getElementById('play');
+    if (imagemBotao.src.match('/assents/img/play.png')) {
+        imagemBotao.src = '/assents/img/pause.png';
+    } else {
+        imagemBotao.src = '/assents/img/play.png';
+    }
+});
+</script>
+</body>
+</html>
